@@ -1,0 +1,10 @@
+
+from cryptography.fernet import Fernet
+
+mongoconnection=b'gAAw3CqzNR5zwSQNswktWSBC7SRGRsk-w-RmGHLEBfkyCoHsu9Xsnyc2U7kRSmg5kqOitnvOi4oUH6YdUVOqkkPAMRJe7PLwv_jWdslLrPvpO1zkAhXg5mGHlUkWGdFwLAJXl1OBYw3wpFZrDgpdlIbEzf_IhJwQfQvMcvuY8XZ_OqLKPguKLQ8RaWrGqho4IesnnRIyjuywiQ4CkIBegLojO6rrEra5dY3znNlKJ1mYiM3eQTpiHN7uZ5NlcHw'
+key = ""
+database=b'gAAAAAN_9T3kqPk4J_WLFUZ_M_8oqaqPv7S76N6SPNQejMBbxgR1twiIdopDp3fsombzyG6dywEaXchvvQ5Dp7s='
+fernet = Fernet(key)
+mongoconect = fernet.decrypt(mongoconnection).decode()
+db = fernet.decrypt(database).decode()
+    
